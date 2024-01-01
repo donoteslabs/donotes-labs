@@ -35,45 +35,43 @@ import Grid from '@mui/material/Grid'; // Grid version 1
 import logo from './logo.png';
 import Typography from '@mui/material/Typography';
 
-import dn from './dark.png';
-import dnw from './light.png';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: 'rgb(185, 195, 255)',
-      contrastText: 'rgb(32, 44, 97)',
+      main: 'rgb(231, 194, 108)',
+      contrastText: 'rgb(63, 46, 0)',
     },
     secondary: {
-      main: 'rgb(195, 197, 221)',
-      contrastText: 'rgb(44, 47, 66)',
+      main: 'rgb(215, 197, 160)',
+      contrastText: 'rgb(58, 47, 21)',
     },
     tertiary: {
-      main: 'rgb(229, 186, 217)',
-      contrastText: 'rgb(68, 38, 62)',
+      main: 'rgb(175, 207, 171)',
+      contrastText: 'rgb(28, 54, 29)',
     },
     error: {
       main: 'rgb(255, 180, 171)',
       contrastText: 'rgb(105, 0, 5)',
     },
     background: {
-      default: 'rgb(18, 19, 24)',
-      paper: 'rgb(18, 19, 24)',
+      default: 'rgb(23, 19, 11)',
+      paper: 'rgb(23, 19, 11)',
     },
     surface: {
-      main: 'rgb(18, 19, 24)',
-      variant: 'rgb(69, 70, 79)',
-      dim: 'rgb(18, 19, 24)',
-      bright: 'rgb(56, 57, 63)',
-      container: 'rgb(31, 31, 37)',
-      containerLow: 'rgb(27, 27, 33)',
-      containerHigh: 'rgb(41, 42, 47)',
+      main: 'rgb(23, 19, 11)',
+      variant: 'rgb(77, 70, 57)',
+      dim: 'rgb(23, 19, 11)',
+      bright: 'rgb(62, 57, 47)',
+      container: 'rgb(35, 31, 23)',
+      containerLow: 'rgb(31, 27, 19)',
+      containerHigh: 'rgb(46, 41, 33)',
     },
     text: {
-      primary: 'rgb(227, 225, 233)',
-      secondary: 'rgb(198, 197, 208)',
-      disabled: 'rgb(144, 144, 154)',
-      hint: 'rgb(69, 70, 79)',
+      primary: 'rgb(235, 225, 212)',
+      secondary: 'rgb(208, 197, 180)',
+      disabled: 'rgb(153, 144, 128)',
+      hint: 'rgb(77, 70, 57)',
     },
   },
   typography: {
@@ -83,17 +81,17 @@ const darkTheme = createTheme({
 
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode:'light',
     primary: {
-      main: 'rgb(80, 91, 146)',
+      main: 'rgb(118, 90, 11)',
       contrastText: 'rgb(255, 255, 255)',
     },
     secondary: {
-      main: 'rgb(90, 93, 114)',
+      main: 'rgb(107, 93, 63)',
       contrastText: 'rgb(255, 255, 255)',
     },
     tertiary: {
-      main: 'rgb(118, 84, 110)',
+      main: 'rgb(73, 101, 72)',
       contrastText: 'rgb(255, 255, 255)',
     },
     error: {
@@ -101,23 +99,23 @@ const lightTheme = createTheme({
       contrastText: 'rgb(255, 255, 255)',
     },
     background: {
-      default: 'rgb(251, 248, 255)',
-      paper: 'rgb(251, 248, 255)',
+      default: 'rgb(255, 248, 242)',
+      paper: 'rgb(255, 248, 242)',
     },
     surface: {
-      main: 'rgb(251, 248, 255)',
-      variant: 'rgb(226, 225, 236)',
-      dim: 'rgb(219, 217, 224)',
-      bright: 'rgb(251, 248, 255)',
-      container: 'rgb(239, 237, 244)',
-      containerLow: 'rgb(245, 242, 250)',
-      containerHigh: 'rgb(233, 231, 239)',
+      main: 'rgb(255, 248, 242)',
+      variant: 'rgb(236, 225, 207)',
+      dim: 'rgb(226, 217, 204)',
+      bright: 'rgb(255, 248, 242)',
+      container: 'rgb(246, 237, 223)',
+      containerLow: 'rgb(252, 242, 229)',
+      containerHigh: 'rgb(240, 231, 217)',
     },
     text: {
-      primary: 'rgb(27, 27, 33)',
-      secondary: 'rgb(69, 70, 79)',
-      disabled: 'rgb(118, 118, 128)',
-      hint: 'rgb(118, 118, 128)',
+      primary: 'rgb(31, 27, 19)',
+      secondary: 'rgb(77, 70, 57)',
+      disabled: 'rgb(126, 118, 103)',
+      hint: 'rgb(77, 70, 57)',
     },
   },
   typography: {
@@ -148,16 +146,13 @@ function scrollToElement(element) {
   }
 }
   const [colorScheme, setColorScheme] = React.useState('light');
-  const [dni, setDni] = React.useState(dn);
   const [theme, setTheme] = React.useState(lightTheme);
   const [isDarkMode, setIsDarkMode] = React.useState(false);
   React.useEffect(()=>{
     if(colorScheme === 'light') {
       setTheme(lightTheme);
-      setDni(dnw);
     }else {
       setTheme(darkTheme);
-      setDni(dn)
     }
   }, [colorScheme])
   React.useEffect(() => {
@@ -200,20 +195,9 @@ function scrollToElement(element) {
         <div className='app-main'>
           
         <div className='content'>
-        <Breadcrumbs aria-label="breadcrumb" sx={{paddingTop: 5}}>
-          
-  <a href='https://donotes.app'>donotes.app</a>
-  <Link to='/'>tools</Link>
-      {pathnames.length > 0 && (
-        generateBreadcrumbs(pathnames)
-      ) }
-      
-    </Breadcrumbs>
     <Routes >
         <Route index path="/" element={<Home />} />
           <Route path="*" element={<h1>404</h1>} />
-          <Route path="/lzutf8"  element={<Lzutf8Compressor />}/>
-          <Route path="/lz77"  element={<LZ77Compressor />}/>
           </Routes>
       <div className='footer'>
         <Box>
@@ -224,8 +208,11 @@ function scrollToElement(element) {
               <div className='logo' style={{width: '100%', display:'flex', justifyContent:'center',alignItems:'center'}}>
                   <img src={logo} alt="Logo" className='img' />
                   <div className='logotext2'>
-                      Tools
+                      Labs
                   </div>
+              </div>
+              <div style={{paddingLeft: 15}}>
+                by donotes
               </div>
               <p style={{fontSize: 'smaller'}}>&copy; {today.getFullYear()} DoNotes by Suleman Hussain</p>
               </div>

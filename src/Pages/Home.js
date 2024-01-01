@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import pic1 from "../Components/pic1.webp"
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -20,35 +22,28 @@ export default function Home() {
 
   return (
     <>
-      <div>
-        <h1 style={{ padding: 15 }}>Free online tools</h1>
-      </div>
-        
-      <Box sx={{ display: 'flex', alignItems: 'flex-end' ,gap: 1, marginBottom: 3 }}>
-        <SearchIcon />
-        <TextField id="input-with-sx" label="Search tools..." variant="standard" 
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)} />
-      </Box>
-
-      <div style={{
-        width: '65%',
-        minWidth: 300,
+    <div style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      margin: 15,
+      paddingTop: 75,
+      paddingBottom: 75,
+      gap: 20,
+    }}>
+      <Card sx={{
+        padding: 2,
+        borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection:'column',
-        flexWrap: 'wrap',
-        gap: 10,
       }}>
-
-        {filteredTools.map(tool => (
-          <Link key={tool.id} to={tool.id === 1 ? "#" : tool.id === 2 ? "lzutf8" : "lz77"} className='btn'>
-            {tool.name}
-            <md-ripple></md-ripple>
-          </Link>
-        ))}
-      </div>
+        <div>
+        <h1>Website development agency</h1>
+        <h2>High quality, low budget</h2>
+        <md-filled-button>Learn more...</md-filled-button>
+        </div>
+      </Card>
+      <img src={pic1} alt="Pic 1" style={{height: 350, borderRadius: 15, boxShadow: '0 0 30px 30px #0003'}}/></div>
     </>
   );
 }

@@ -1,6 +1,5 @@
 {
-  "name": "donotes-tools",
-  "homepage": "/tools",
+  "name": "donotes-labs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
