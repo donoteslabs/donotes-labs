@@ -1,0 +1,331 @@
+@import url("https://use.typekit.net/jiq1bfn.css");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Gabarito&family=Quicksand&display=swap');
+:root {
+  --md-ref-typeface-brand: 'Comfortaa';
+  --md-ref-typeface-plain: system-ui;
+}
+.light {
+  --label-text-font: Comfortaa;
+  --md-sys-color-primary: rgb(80 91 146);
+  --md-sys-color-surface-tint: rgb(80 91 146);
+  --md-sys-color-on-primary: rgb(255 255 255);
+  --md-sys-color-primary-container: rgb(221 225 255);
+  --md-sys-color-on-primary-container: rgb(8 22 75);
+  --md-sys-color-secondary: rgb(90 93 114);
+  --md-sys-color-on-secondary: rgb(255 255 255);
+  --md-sys-color-secondary-container: rgb(223 225 249);
+  --md-sys-color-on-secondary-container: rgb(23 27 44);
+  --md-sys-color-tertiary: rgb(118 84 110);
+  --md-sys-color-on-tertiary: rgb(255 255 255);
+  --md-sys-color-tertiary-container: rgb(255 215 243);
+  --md-sys-color-on-tertiary-container: rgb(44 18 41);
+  --md-sys-color-error: rgb(186 26 26);
+  --md-sys-color-on-error: rgb(255 255 255);
+  --md-sys-color-error-container: rgb(255 218 214);
+  --md-sys-color-on-error-container: rgb(65 0 2);
+  --md-sys-color-background: rgb(251 248 255);
+  --md-sys-color-on-background: rgb(27 27 33);
+  --md-sys-color-surface: rgb(251 248 255);
+  --md-sys-color-on-surface: rgb(27 27 33);
+  --md-sys-color-surface-variant: rgb(226 225 236);
+  --md-sys-color-on-surface-variant: rgb(69 70 79);
+  --md-sys-color-outline: rgb(118 118 128);
+  --md-sys-color-outline-variant: rgb(198 197 208);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(48 48 54);
+  --md-sys-color-inverse-on-surface: rgb(242 240 247);
+  --md-sys-color-inverse-primary: rgb(185 195 255);
+  --md-sys-color-primary-fixed: rgb(221 225 255);
+  --md-sys-color-on-primary-fixed: rgb(8 22 75);
+  --md-sys-color-primary-fixed-dim: rgb(185 195 255);
+  --md-sys-color-on-primary-fixed-variant: rgb(56 67 121);
+  --md-sys-color-secondary-fixed: rgb(223 225 249);
+  --md-sys-color-on-secondary-fixed: rgb(23 27 44);
+  --md-sys-color-secondary-fixed-dim: rgb(195 197 221);
+  --md-sys-color-on-secondary-fixed-variant: rgb(66 70 89);
+  --md-sys-color-tertiary-fixed: rgb(255 215 243);
+  --md-sys-color-on-tertiary-fixed: rgb(44 18 41);
+  --md-sys-color-tertiary-fixed-dim: rgb(229 186 217);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(92 60 86);
+  --md-sys-color-surface-dim: rgb(219 217 224);
+  --md-sys-color-surface-bright: rgb(251 248 255);
+  --md-sys-color-surface-container-lowest: rgb(255 255 255);
+  --md-sys-color-surface-container-low: rgb(245 242 250);
+  --md-sys-color-surface-container: rgb(239 237 244);
+  --md-sys-color-surface-container-high: rgb(233 231 239);
+  --md-sys-color-surface-container-highest: rgb(227 225 233);
+}
+.dark {
+  color-scheme: dark;
+
+  --label-text-font: Comfortaa;
+  --md-sys-color-primary: rgb(185 195 255);
+  --md-sys-color-surface-tint: rgb(185 195 255);
+  --md-sys-color-on-primary: rgb(32 44 97);
+  --md-sys-color-primary-container: rgb(56 67 121);
+  --md-sys-color-on-primary-container: rgb(221 225 255);
+  --md-sys-color-secondary: rgb(195 197 221);
+  --md-sys-color-on-secondary: rgb(44 47 66);
+  --md-sys-color-secondary-container: rgb(66 70 89);
+  --md-sys-color-on-secondary-container: rgb(223 225 249);
+  --md-sys-color-tertiary: rgb(229 186 217);
+  --md-sys-color-on-tertiary: rgb(68 38 62);
+  --md-sys-color-tertiary-container: rgb(92 60 86);
+  --md-sys-color-on-tertiary-container: rgb(255 215 243);
+  --md-sys-color-error: rgb(255 180 171);
+  --md-sys-color-on-error: rgb(105 0 5);
+  --md-sys-color-error-container: rgb(147 0 10);
+  --md-sys-color-on-error-container: rgb(255 218 214);
+  --md-sys-color-background: rgb(18 19 24);
+  --md-sys-color-on-background: rgb(227 225 233);
+  --md-sys-color-surface: rgb(18 19 24);
+  --md-sys-color-on-surface: rgb(227 225 233);
+  --md-sys-color-surface-variant: rgb(69 70 79);
+  --md-sys-color-on-surface-variant: rgb(198 197 208);
+  --md-sys-color-outline: rgb(144 144 154);
+  --md-sys-color-outline-variant: rgb(69 70 79);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(227 225 233);
+  --md-sys-color-inverse-on-surface: rgb(48 48 54);
+  --md-sys-color-inverse-primary: rgb(80 91 146);
+  --md-sys-color-primary-fixed: rgb(221 225 255);
+  --md-sys-color-on-primary-fixed: rgb(8 22 75);
+  --md-sys-color-primary-fixed-dim: rgb(185 195 255);
+  --md-sys-color-on-primary-fixed-variant: rgb(56 67 121);
+  --md-sys-color-secondary-fixed: rgb(223 225 249);
+  --md-sys-color-on-secondary-fixed: rgb(23 27 44);
+  --md-sys-color-secondary-fixed-dim: rgb(195 197 221);
+  --md-sys-color-on-secondary-fixed-variant: rgb(66 70 89);
+  --md-sys-color-tertiary-fixed: rgb(255 215 243);
+  --md-sys-color-on-tertiary-fixed: rgb(44 18 41);
+  --md-sys-color-tertiary-fixed-dim: rgb(229 186 217);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(92 60 86);
+  --md-sys-color-surface-dim: rgb(18 19 24);
+  --md-sys-color-surface-bright: rgb(56 57 63);
+  --md-sys-color-surface-container-lowest: rgb(13 14 19);
+  --md-sys-color-surface-container-low: rgb(27 27 33);
+  --md-sys-color-surface-container: rgb(31 31 37);
+  --md-sys-color-surface-container-high: rgb(41 42 47);
+  --md-sys-color-surface-container-highest: rgb(52 52 58);
+}
+.MuiBreadcrumbs-li a {
+  color: var(--md-sys-color-on-primary-container);
+  text-decoration: none;
+}
+.MuiBreadcrumbs-li a:hover {
+  text-decoration: underline;
+
+}
+.label {
+  font-family: 'Comfortaa', sans-serif !important;
+}
+.disabled {
+  background-color: var(--md-sys-color-surface-container-lowest) !important;
+  cursor: not-allowed !important;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa',Verdana, Geneva, Tahoma, sans-serif
+}
+* {
+  
+  transition: 0.2s background-color ease, 0.2s color ease;
+}
+.App {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
+.nav {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  var(--md-sys-color-surface-container);
+  
+  color: var(--md-sys-color-on-background);
+}
+.img {
+  width: 50px;
+  height: 50px;
+  margin-left: 25px;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+.logotext {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  color: var(--md-sys-color-on-background);
+  text-decoration: none;
+  font-size: 35px;
+}
+.logotext2 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  font-style: normal;
+}
+.label {
+  font-family: 'Comfortaa' !important;
+}
+.app-main {
+  height: calc(100vh - 86px);
+  overflow-y: auto;
+}
+.btn {
+  cursor: pointer;
+  color: var(--md-sys-color-on-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 35%;
+  min-width: 300px;
+  height: 50px;
+  background-color: var(--md-sys-color-surface-container-high);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+}
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.dn {
+  width: 270px;
+  min-width: 40vw;
+  border-radius: 15px;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+h1 {
+  color: var(--md-sys-color-on-background);
+  font-family: "Comfortaa", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0;
+  text-align: center;
+}
+.magic-text {
+  margin: 7px;
+}
+
+h1 > .magic {
+  display: inline-block;
+  position: relative;
+}
+
+h1 > .magic > .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  
+  animation: scale 1000ms ease forwards infinite;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+h1 > .magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+h1 > .magic > .magic-star > svg > path {
+  fill: var(--md-sys-color-primary);
+}
+
+.magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    #36d7b7,
+    #5172ff,
+    var(--md-sys-color-primary),
+    #36d7b7
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+.magic-star {
+  opacity: 0.6;
+  transition: 0.8s ease opacity;
+}
+.magic:hover  .magic-star {
+  opacity: 0.7 ;
+  transition: 0.2s ease opacity;
+
+}
+@media only screen and (max-width: 600px) {
+  .logotext  {
+    display: none;
+  }
+}
+
+.footer {
+  margin-top: 15px;
+  width: 100%;
+}
