@@ -44,7 +44,7 @@ export default function Home() {    const navigate = useNavigate();
       elevation={2}>
         <div>
         <h1>Crafting Excellence: Affordable Web Solutions</h1>
-        <h2>Elevate Your Online Presence with High-Quality, Budget-Friendly Website Development</h2>
+        <h3>Elevate Your Online Presence with High-Quality, Budget-Friendly Website Development</h3>
         <md-filled-tonal-button  onClick={()=>{navigate('enquire')}}>Begin Journey</md-filled-tonal-button>
         </div>
       </Card>
