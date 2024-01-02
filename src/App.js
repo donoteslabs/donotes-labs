@@ -22,6 +22,7 @@ import '@material/web/icon/icon'
 import '@material/web/icon/internal/icon'
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Enquire from './Pages/Enquire';
 import '@material/web/list/list';
 import '@material/web/list/list-item'
 import '@material/web/chips/chip-set'
@@ -100,10 +101,10 @@ const lightTheme = createTheme({
     },
     background: {
       default: 'rgb(255, 248, 242)',
-      paper: 'rgb(255, 248, 242)',
+      paper: 'rgb(236, 225, 207)',
     },
     surface: {
-      main: 'rgb(255, 248, 242)',
+      main: 'rgb(236, 225, 207)',
       variant: 'rgb(236, 225, 207)',
       dim: 'rgb(226, 217, 204)',
       bright: 'rgb(255, 248, 242)',
@@ -197,6 +198,7 @@ function scrollToElement(element) {
         <div className='content'>
     <Routes >
         <Route index path="/" element={<Home />} />
+          <Route path="/enquire" element={<Enquire />} />
           <Route path="*" element={<h1>404</h1>} />
           </Routes>
       <div className='footer'>
@@ -234,6 +236,9 @@ function scrollToElement(element) {
     
     <ListItemButton onClick={()=>{window.location.href = 'https://donotes.app/tools'}}>
       <ListItemText primary="Tools - by DoNotes" />
+    </ListItemButton>
+    <ListItemButton onClick={()=>{window.location.href = 'https://labs.donotes.app/'}}>
+      <ListItemText primary="Labs - by DoNotes" />
     </ListItemButton>
     </List>
               </Grid>
