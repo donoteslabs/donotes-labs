@@ -37,7 +37,8 @@ export default function Home() {    const navigate = useNavigate();
         padding: 2,
         borderRadius: 5,
         display: 'flex',
-        maxWidth: '40%',
+        width: '40%',
+        minWidth: 300,
         justifyContent: 'center',
         alignItems: 'center',
       }}

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
@@ -18,6 +21,14 @@ export default function Enquire() {
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogMessage, setDialogMessage] = useState('');
 
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   const tools = [
     { id: 1, name: 'Invoice creator' },
     { id: 2, name: 'lzutf8 Compression/Decompression' },
@@ -30,6 +41,7 @@ export default function Enquire() {
   );
 
   const handleSubmit = () => {
+    handleOpen()
     const name = $('#outlined-basic-fullname').val();
     const email = $('#outlined-basic-email').val();
     const enquiry = $('#outlined-basic-message').val();
@@ -40,6 +52,7 @@ export default function Enquire() {
       { name, email, enquiry },
       (data) => {
         // Check the response f
+        handleClose()
           setOpenDialog(true);
           setDialogMessage(data);
         
@@ -53,12 +66,21 @@ export default function Enquire() {
 
   return (
     <>
+    
+    <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+        onClick={handleClose}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <Card
         sx={{
           padding: 2,
           borderRadius: 5,
           display: 'flex',
           width: '60%',
+          minWidth: 333,
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
